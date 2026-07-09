@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Brick Shipping Importaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <img src="assets/logo.png" alt="Brick Shipping Chile">
+    </div>
+
+    <div class="beneficios">
+        <div><strong>Importación LEGO®</strong><br><span>Desde Europa a Chile</span></div>
+        <div><strong>Valores referenciales</strong><br><span>Sujetos a confirmación</span></div>
+    </div>
+</header>
+
+<div class="layout">
+
+    <main class="catalogo">
+        <h1>Catálogo de Importación LEGO®</h1>
+        <p class="nota">Selecciona productos para armar una estimación de pedido.</p>
+
+        <div class="filtros">
+            <input type="text" id="busqueda" placeholder="Buscar por nombre, código o tema...">
+
+            <select id="filtro-tema">
+                <option value="">Todas las categorías</option>
+            </select>
+
+            <select id="orden">
+                <option value="nombre">Orden alfabético A-Z</option>
+                <option value="precio-menor">Precio menor a mayor</option>
+                <option value="precio-mayor">Precio mayor a menor</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Tema</th>
+                    <th>Código SKU</th>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Valor referencial</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="resultado"></tbody>
+        </table>
+    </main>
+
+    <aside class="carrito">
+        <h2>Mi Pedido</h2>
+
+        <div id="items-carrito"></div>
+
+        <hr>
+
+        <div class="resumen">
+            <p><span>Subtotal productos</span><strong id="subtotal">$0</strong></p>
+            <p><span>Importación estimada</span><strong id="importacion">$0</strong></p>
+            <p><span>Envío nacional</span><strong id="envio-nacional">$0</strong></p>
+            <p class="total"><span>Total estimado</span><strong id="total">$0</strong></p>
+        </div>
+
+        <p class="mini">
+            Estimación referencial basada en costos de importación. El valor final puede variar según disponibilidad, tipo de cambio, peso, volumen e internación.
+        </p>
+
+        <button id="solicitar">Solicitar pedido</button>
+        <button id="vaciar" onclick="vaciarCarrito()">Vaciar pedido</button>
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

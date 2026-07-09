@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #111;
+}
+
+/* HEADER */
+.topbar {
+    height: 90px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.brand img {
+    height: 65px;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+.beneficios {
+    display: flex;
+    gap: 45px;
+    font-size: 14px;
+}
+
+.beneficios span {
+    color: #cfcfcf;
+}
+
+/* LAYOUT PRINCIPAL */
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 22px;
+    max-width: 1450px;
+    margin: 25px auto;
+    padding: 0 25px;
+    align-items: start;
+}
+
+.catalogo,
+.carrito {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 0 14px rgba(0,0,0,.10);
+}
+
+h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.nota,
+.mini {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/* FILTROS */
+.filtros {
+    display: grid;
+    grid-template-columns: 1fr 220px 220px;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+input,
+select {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    background: white;
+    box-sizing: border-box;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: #fff;
+}
+
+thead {
+    background: #000;
+    color: white;
+}
+
+th,
+td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: left;
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background: #f3f3f3;
+}
+
+.precio {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #333;
+}
+
+/* CARRITO */
+.carrito {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#items-carrito {
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 10px;
+}
+
+.carrito label {
+    display: block;
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.carrito input {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.item-carrito {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.item-carrito strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.item-carrito small {
+    display: block;
+    color: #666;
+    margin: 3px 0;
+}
+
+.acciones {
+    margin-top: 8px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    padding: 6px 9px;
+    font-size: 12px;
+}
+
+.resumen {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.resumen p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    gap: 10px;
+}
+
+.resumen strong {
+    white-space: nowrap;
+}
+
+.resumen .total {
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+#total {
+    color: #000;
+}
+
+#solicitar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+#vaciar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: white;
+    color: #000;
+    border: 1px solid #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios {
+        display: none;
+    }
+
+    .topbar {
+        justify-content: center;
+    }
+
+    .carrito {
+        position: static;
+    }
+}#items-carrito::-webkit-scrollbar {
+    width: 6px;
+}
+
+#items-carrito::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+}.producto-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+td:first-child {
+    width: 70px;
+    text-align: center;
+}
