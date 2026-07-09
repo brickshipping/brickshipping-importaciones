@@ -19,7 +19,7 @@ const envioNacionalEl = document.getElementById("envio-nacional");
 const totalEl = document.getElementById("total");
 const btnSolicitar = document.getElementById("solicitar");
 
-fetch("../data/catalogo_cliente.json")
+fetch("/data/catalogo_cliente.json")
     .then(response => response.json())
     .then(data => {
         catalogo = data;
